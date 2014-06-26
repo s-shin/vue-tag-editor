@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Example: Tag Editor</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <ul id="js-tag-editor-1" class="tag-editor" v-on="click: focusInput">
+      <li class="tag" v-repeat="tags">
+        {{$value}} <span v-on="click: removeTag($value)">×</span>
+        <input type="hidden" name="tags[]" value="{{$value}}" />
+      </li>
+      <li class="new-tag">
+        <input type="text" v-model="newTagName" v-on="keypress: addInputTag | key enter" />
+      </li>
+    </ul>
+    <ul id="js-tag-editor-2" class="tag-editor" v-on="click: focusInput">
+      <li class="tag" v-repeat="tags">
+        {{$value}} <span v-on="click: removeTag($value)">×</span>
+        <input type="hidden" name="tags[]" value="{{$value}}" />
+      </li>
+      <li class="new-tag">
+        <input type="text" v-model="newTagName" v-on="keypress: addInputTag | key enter" />
+      </li>
+    </ul>
+    <script src="vue.min.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>

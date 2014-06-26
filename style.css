@@ -1,0 +1,28 @@
+.tag-editor {
+  margin: 10;
+  padding: 0.3em;
+  border: solid 1px #AAA;
+  border-radius: 2px;
+  overflow: hidden;
+}
+ul.tag-editor {
+  list-style: none;
+}
+.tag-editor .tag {
+  float: left;
+  padding: 0.1em 0.2em;
+  margin-right: 0.3em;
+  background-color: #EEE;
+  border: solid 1px #CCC;
+  border-radius: 2px;
+  font-size: 0.9em;
+}
+.tag-editor .new-tag {
+  float: left;
+}
+.tag-editor .new-tag input {
+  border-width: 0;
+  outline: none;
+  width: 100px;
+  font-size: 1em;
+}
